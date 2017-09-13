@@ -1,5 +1,5 @@
 /*=========================
-  Scrollbar
+  
   ===========================*/
 s.scrollbar = {
     isTouched: false,

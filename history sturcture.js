@@ -74,12 +74,17 @@ Effects
 Keyboard
 mousewheel
 Parallax
+Hashnav: pagination 안쓸거라 나중에도 안쓸듯
+history: 특정 slide로 이동하는 기능, Hashnav와 연관
 
-zoom ?
+// partial remove
+core: Pagination, autoplay, (Clicks)
+
 
 // custom
-core: Pagination, autoplay, (Clicks)
-scrollbar: isTouched: false, -> true
+scrollbar: whole data를 기준으로 움직이게 수정 필요
+Images Lazy Loading: 참조 및 수정
+
 
 
 // 커스텀 완료 후 click관련 코드 제거하기

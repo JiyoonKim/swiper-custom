@@ -203,7 +203,7 @@
             }))
             .pipe(sourcemaps.init())
             .pipe(concat(swiper.filename + '.js'))
-            .pipe(header(swiper.banner, { pkg : swiper.pkg, date: swiper.date } ))
+            // .pipe(header(swiper.banner, { pkg : swiper.pkg, date: swiper.date } ))
             .pipe(jshint())
             .pipe(jshint.reporter(stylish))
             // .pipe(sourcemaps.write('./maps/'))

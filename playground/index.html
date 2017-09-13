@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="swiper-container">
-        <!-- <div class="swiper-scrollbar"></div> -->
+        <div class="swiper-scrollbar"></div>
         <!-- <div class="swiper-button-prev"></div> -->
         <!-- <div class="swiper-button-next"></div> -->
         <div class="swiper-wrapper">
@@ -124,7 +124,10 @@
                 depth: 200,
                 modifier: 1
                 // slideShadows : true
-            }
+            },
+            scrollbarHide: false,   
+            scrollbarDraggable: true,
+            scrollbar: '.swiper-scrollbar'
         });
     </script>
 </body>
