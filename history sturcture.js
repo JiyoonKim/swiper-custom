@@ -73,6 +73,7 @@ this.carouselOptions = {
 Effects
 Keyboard
 mousewheel
+Parallax
 
 zoom ?
 
