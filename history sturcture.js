@@ -69,6 +69,20 @@ this.carouselOptions = {
  5341  Swiper AMD Export
 
 
+// remove
+Effects
+Keyboard
+mousewheel
+
+zoom ?
+
+// custom
+core: Pagination, autoplay, (Clicks)
+scrollbar: isTouched: false, -> true
+
+
+// 커스텀 완료 후 click관련 코드 제거하기
+
 
 // original
 /Users/Jyoon/Documents/Snowpalm/src/assets/swiper-custom/swiper-custom.js:

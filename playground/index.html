@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="swiper-container">
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-scrollbar"></div> -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
         <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
@@ -23,10 +23,29 @@
             <div class="swiper-slide">Slide 9</div>
             <div class="swiper-slide">Slide 10</div>
         </div>
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
+
+
+    <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/7)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/8)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/9)"></div>
+            <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/10)"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div> -->
+
+
     <style>
-    body, html {
+    /*body, html {
         padding: 0;
         margin: 0;
         position: relative;
@@ -42,20 +61,70 @@
         color:#000;
         text-align: center;
         line-height: 300px;
+    }*/
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        /* added, device height */
+        height: 667px; 
+        /*padding-top: 50px;*/
+        /*padding-bottom: 50px;*/
+    }
+    /* added */
+    .swiper-wrapper {
+        overflow: visible;
+        margin-left: 30px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+        /* added */
+        border: 1px solid black;
     }
     </style>
+
     <script src="../build/js/swiper.js"></script>
     <script>
+        // original
+        // var swiper = new Swiper('.swiper-container', {
+        //     spaceBetween: 50,
+        //     slidesPerView: 2,
+        //     centeredSlides: true,
+        //     slideToClickedSlide: true,
+        //     grabCursor: true,
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     scrollbarHide: false,   
+        //     scrollbarDraggable: true,
+        //     scrollbar: '.swiper-scrollbar',
+        //     pagination: '.swiper-pagination',
+        // });
+
+        // snowpalm
         var swiper = new Swiper('.swiper-container', {
-            spaceBetween: 50,
-            slidesPerView: 2,
-            centeredSlides: true,
-            slideToClickedSlide: true,
-            grabCursor: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            scrollbar: '.swiper-scrollbar',
-            pagination: '.swiper-pagination',
+            effect: 'coverflow', // 
+            direction: 'vertical',
+            // paginationClickable: true,
+            centeredSlides: true, // from the top
+            slidesPerView: 'auto',
+            observer: true,
+            lazyLoading: true,
+            coverflow: {
+                rotate: 0,
+                stretch: 100, // card distance
+                depth: 200,
+                modifier: 1
+                // slideShadows : true
+            }
         });
     </script>
 </body>
